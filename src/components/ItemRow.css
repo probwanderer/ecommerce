@@ -1,0 +1,14 @@
+.item-image{
+    height:50px;
+    width:50px;
+}
+.Quantity{
+    width:100px;
+    margin-right:20px;
+    margin-left:100px;
+}
+.add-to-cart{
+    height:30px;
+    width:70px;
+    font-size: 10px;
+}

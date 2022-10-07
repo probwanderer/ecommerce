@@ -7,10 +7,13 @@ function ResponsiveExample(props) {
     <Table responsive>
       <thead>
         <tr>
-          <th>#</th>
-          {Array.from({ length: 7 }).map((_, index) => (
-            <th key={index}>Table heading</th>
-          ))}
+          <th>Image</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Stock</th>
+          <th>Price</th>
+          <th></th>
+          <th>Buy</th>
         </tr>
       </thead>
       <tbody>
