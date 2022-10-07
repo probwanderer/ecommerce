@@ -23,14 +23,14 @@ class Results extends Component {
     }
     
     render() {
+        
         const { DataisLoaded, items } = this.state;
         if (!DataisLoaded) return <div>
             <h1> Please wait some time.... </h1> </div> ;
    
         return (
         <div >
-        
-           <Items items={items}/>
+           <Items items={items} selectedFilter={this.props.selectedFilter}/>
         </div>
     );
     

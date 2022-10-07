@@ -1,8 +1,17 @@
 import Table from 'react-bootstrap/Table';
 import ItemRow from './ItemRow';
 function ResponsiveExample(props) {
-    const {items}=props;
-    const itemList= items.map(item => <ItemRow  key={item.id} item={item}/>)
+    const items=props.items;
+    const selectedFilter=props.selectedFilter;
+   var itemList;
+   if(selectedFilter==='No Filter')
+   itemList= items.map(item => <ItemRow  key={item.id} item={item}/>)
+   else
+   {
+    itemList= items.filter(item => item.category===selectedFilter)
+    itemList=itemList.map(item => <ItemRow  key={item.id} item={item}/>)
+  }
+
   return (
     <Table responsive>
       <thead>

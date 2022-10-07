@@ -22,7 +22,7 @@ import Form from 'react-bootstrap/Form';
             {capitalizeFirst(item.category)}
         </td>
         <td>
-        <i class="fa fa-check" aria-hidden="true" style={{color:"green"}}></i>
+        <i className="fa fa-check" aria-hidden="true" style={{color:"green"}}></i>
         </td>
         <td>
             ${item.price}
@@ -30,7 +30,7 @@ import Form from 'react-bootstrap/Form';
         <td >
           <div className="d-flex align-items-end align-items-center" style={{height:"50px"}}>
            <input type="Number" className = "Quantity" />
-           <Button className="add-to-cart"><i class="fa fa-shopping-cart" style={{fontSize:"10px"}}></i></Button>
+           <Button className="add-to-cart"><i className="fa fa-shopping-cart" style={{fontSize:"10px"}}></i></Button>
            </div>
         </td>
         <td className="align-items-center">

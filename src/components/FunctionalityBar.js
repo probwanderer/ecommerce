@@ -5,7 +5,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function NavScrollExample() {
+function NavScrollExample({setSelectedFilter}) {
+  const handleChange=(event)=>{
+    setSelectedFilter(event);
+  }
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -16,14 +19,17 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavDropdown title="Category" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
+            <NavDropdown title="Category" id="navbarScrollingDropdown" onSelect={handleChange}>
+            <NavDropdown.Item eventKey="No Filter">No Filter</NavDropdown.Item>
+              <NavDropdown.Item eventKey="men's clothing">Men's Clothing</NavDropdown.Item>
+              <NavDropdown.Item eventKey="women's clothing">
+                Women's Clothing
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item eventKey="electronics">
+                Electronics
+              </NavDropdown.Item>
+              <NavDropdown.Item eventKey="jewelery">
+               Jewelery
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Size" id="navbarScrollingDropdown">
