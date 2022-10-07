@@ -4,10 +4,21 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useState } from 'react';
 
-function NavScrollExample({setSelectedFilter}) {
+function NavScrollExample({setSelectedFilter,setSearchKeyword}) {
+  const [message, setMessage] = useState('');
+
   const handleChange=(event)=>{
     setSelectedFilter(event);
+  }
+  const handleChange2 = event => {
+    setMessage(event.target.value);
+  };
+
+  const handleClick=(event)=>{
+    event.preventDefault();
+    setSearchKeyword(message);
   }
   return (
     <Navbar bg="light" expand="lg">
@@ -50,8 +61,10 @@ function NavScrollExample({setSelectedFilter}) {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={handleChange2}
+              value={message}
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" onClick={handleClick}>Search</Button>
           </Form> 
           <Button className="ml-5">Add to Cart</Button>
         </Navbar.Collapse>

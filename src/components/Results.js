@@ -30,7 +30,7 @@ class Results extends Component {
    
         return (
         <div >
-           <Items items={items} selectedFilter={this.props.selectedFilter}/>
+           <Items items={items} selectedFilter={this.props.selectedFilter} keyWord={this.props.keyWord}/>
         </div>
     );
     
