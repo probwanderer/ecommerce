@@ -44,13 +44,13 @@ function NavScrollExample({setSelectedFilter,setSearchKeyword}) {
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Size" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action3">L</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+                XL
               </NavDropdown.Item>
-              <NavDropdown.Divider />
+             
               <NavDropdown.Item href="#action5">
-                Something else here
+               XXL
               </NavDropdown.Item>
             </NavDropdown>
             
@@ -67,7 +67,7 @@ function NavScrollExample({setSelectedFilter,setSearchKeyword}) {
             <Button variant="outline-success" onClick={handleClick}>Search</Button>
           </Form> 
           <Link to="/cart">
-          <Button className="ml-5">Add to Cart</Button>
+          <Button className="ml-5">Go to Cart</Button>
           </Link>
         </Navbar.Collapse>
       </Container>

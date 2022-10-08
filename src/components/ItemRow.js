@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import './ItemRow.css';
 import Form from 'react-bootstrap/Form';

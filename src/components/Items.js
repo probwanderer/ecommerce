@@ -27,7 +27,7 @@ function ResponsiveExample(props) {
           <th>Category</th>
           <th>Stock</th>
           <th>Price</th>
-          <th></th>
+          <th><span style={{display:"inline-block" , width: "150px"}}></span>Quantity</th>
           <th>Buy</th>
         </tr>
       </thead>

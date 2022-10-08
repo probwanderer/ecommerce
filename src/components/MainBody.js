@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card'
 import Cart from './Cart'
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
 function MainBody() {
   let init=[];
   localStorage.setItem("cart",JSON.stringify(init));
