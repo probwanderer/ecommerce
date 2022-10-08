@@ -13,7 +13,7 @@ function TextExample() {
       <FunctionalityBar setSelectedFilter={setSelectedFilter} setSearchKeyword={setSearchKeyword}/>
       <Results selectedFilter={selectedFilter} keyWord={keyWord}/>
       </Card.Body>
-    </Card>
+      </Card>
   );
 }
 
