@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import './ItemRow.css';
 import Form from 'react-bootstrap/Form';
-import { Link,useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 function ItemRow(props){
@@ -15,12 +14,12 @@ function ItemRow(props){
     setMessage(event.target.value);
   };
 
-   let navigate=useNavigate();
+//    let navigate=useNavigate();
    const handleClick=(e)=>{
         e.preventDefault();
-        let cartItems=JSON.parse(sessionStorage.getItem("cart"));
+        let cartItems=JSON.parse(localStorage.getItem("cart"));
     cartItems.push({id:item.id,quantity:parseInt(message)});
-    sessionStorage.setItem("cart",JSON.stringify(cartItems));
+    localStorage.setItem("cart",JSON.stringify(cartItems));
     
    }
 

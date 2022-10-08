@@ -15,7 +15,7 @@ function Cart() {
   }
   let newCartItems=[];
 let total=0;
-  let cartItems=JSON.parse(sessionStorage.getItem("cart"));
+  let cartItems=JSON.parse(localStorage.getItem("cart"));
   for(let i = 0; i < cartItems.length; i++) {
     for(let j = 0; j < items.length; j++) {
         if(cartItems[i].id === items[j].id) {
@@ -50,7 +50,6 @@ let newCartList= newCartItems.map(item => <CartItemRow  key={item.item.id} item=
         </tr>
       </thead>
       <tbody>
-       
         {newCartList}
         <tr>
           <td></td>
