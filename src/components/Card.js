@@ -6,6 +6,7 @@ import { useState } from 'react';
 function TextExample() {
   const [selectedFilter,setSelectedFilter]=useState('No Filter');
   const [keyWord, setSearchKeyword] = useState('');
+  
   return (
     <Card className="cardcss">
       <Card.Body>

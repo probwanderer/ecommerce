@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 function NavScrollExample({setSelectedFilter,setSearchKeyword}) {
   const [message, setMessage] = useState('');
 
@@ -66,7 +66,9 @@ function NavScrollExample({setSelectedFilter,setSearchKeyword}) {
             />
             <Button variant="outline-success" onClick={handleClick}>Search</Button>
           </Form> 
+          <Link to="/cart">
           <Button className="ml-5">Add to Cart</Button>
+          </Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

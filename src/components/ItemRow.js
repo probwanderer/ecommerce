@@ -2,14 +2,27 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import './ItemRow.css';
 import Form from 'react-bootstrap/Form';
- class ItemRow extends Component {
-   
+import { Link,useNavigate } from 'react-router-dom';
 
-  render() {
-   const item=this.props.item;
+function ItemRow(props){
+   
+   const item=props.item;
    const capitalizeFirst = str => {
     return str.charAt(0).toUpperCase() + str.slice(1);
-  };
+   };
+
+   let navigate=useNavigate();
+   const handleClick=(e)=>{
+    e.preventDefault();
+
+    let cartItems=JSON.parse(sessionStorage.getItem("cart"));
+    cartItems.push(item.id);
+    console.log(cartItems);
+    sessionStorage.setItem("cart",JSON.stringify(cartItems));
+    navigate("/cart");
+   }
+
+
     return (
         <tr>
         <td>
@@ -30,18 +43,17 @@ import Form from 'react-bootstrap/Form';
         <td >
           <div className="d-flex align-items-end align-items-center" style={{height:"50px"}}>
            <input type="Number" className = "Quantity" />
-           <Button className="add-to-cart"><i className="fa fa-shopping-cart" style={{fontSize:"10px"}}></i></Button>
+            <Button className="add-to-cart" onClick={handleClick}><i className="fa fa-shopping-cart" style={{fontSize:"10px"}}></i></Button>
            </div>
         </td>
         <td className="align-items-center">
         <Form.Check 
             type='checkbox'
-          style={{marginLeft:"20px",marginRight:"20px", marginTop:"15px"}}/>
+            style={{marginLeft:"20px",marginRight:"20px", marginTop:"15px"}}/>
         </td>
         
     </tr>
     )
-  }
 }
 
 export default ItemRow;
